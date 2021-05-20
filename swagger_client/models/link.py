@@ -31,29 +31,53 @@ class Link(object):
         'id': 'str',
         'name': 'str',
         'short_name': 'str',
-        'ports': 'list[Port]'
+        'ports': 'list[Port]',
+        'total_bandwidth': 'float',
+        'available_bandwidth': 'float',
+        'latency': 'float',
+        'packet_loss': 'float',
+        'availability': 'float'
     }
 
     attribute_map = {
         'id': 'id',
         'name': 'name',
         'short_name': 'short_name',
-        'ports': 'ports'
+        'ports': 'ports',
+        'total_bandwidth': 'total_bandwidth',
+        'available_bandwidth': 'available_bandwidth',
+        'latency': 'latency',
+        'packet_loss': 'packet_loss',
+        'availability': 'availability'
     }
 
-    def __init__(self, id=None, name=None, short_name=None, ports=None):  # noqa: E501
+    def __init__(self, id=None, name=None, short_name=None, ports=None, total_bandwidth=None, available_bandwidth=None, latency=None, packet_loss=None, availability=None):  # noqa: E501
         """Link - a model defined in Swagger"""  # noqa: E501
         self._id = None
         self._name = None
         self._short_name = None
         self._ports = None
+        self._total_bandwidth = None
+        self._available_bandwidth = None
+        self._latency = None
+        self._packet_loss = None
+        self._availability = None
         self.discriminator = None
         self.id = id
         self.name = name
         if short_name is not None:
             self.short_name = short_name
-        if ports is not None:
-            self.ports = ports
+        self.ports = ports
+        if total_bandwidth is not None:
+            self.total_bandwidth = total_bandwidth
+        if available_bandwidth is not None:
+            self.available_bandwidth = available_bandwidth
+        if latency is not None:
+            self.latency = latency
+        if packet_loss is not None:
+            self.packet_loss = packet_loss
+        if availability is not None:
+            self.availability = availability
 
     @property
     def id(self):
@@ -140,8 +164,115 @@ class Link(object):
         :param ports: The ports of this Link.  # noqa: E501
         :type: list[Port]
         """
+        if ports is None:
+            raise ValueError("Invalid value for `ports`, must not be `None`")  # noqa: E501
 
         self._ports = ports
+
+    @property
+    def total_bandwidth(self):
+        """Gets the total_bandwidth of this Link.  # noqa: E501
+
+
+        :return: The total_bandwidth of this Link.  # noqa: E501
+        :rtype: float
+        """
+        return self._total_bandwidth
+
+    @total_bandwidth.setter
+    def total_bandwidth(self, total_bandwidth):
+        """Sets the total_bandwidth of this Link.
+
+
+        :param total_bandwidth: The total_bandwidth of this Link.  # noqa: E501
+        :type: float
+        """
+
+        self._total_bandwidth = total_bandwidth
+
+    @property
+    def available_bandwidth(self):
+        """Gets the available_bandwidth of this Link.  # noqa: E501
+
+
+        :return: The available_bandwidth of this Link.  # noqa: E501
+        :rtype: float
+        """
+        return self._available_bandwidth
+
+    @available_bandwidth.setter
+    def available_bandwidth(self, available_bandwidth):
+        """Sets the available_bandwidth of this Link.
+
+
+        :param available_bandwidth: The available_bandwidth of this Link.  # noqa: E501
+        :type: float
+        """
+
+        self._available_bandwidth = available_bandwidth
+
+    @property
+    def latency(self):
+        """Gets the latency of this Link.  # noqa: E501
+
+
+        :return: The latency of this Link.  # noqa: E501
+        :rtype: float
+        """
+        return self._latency
+
+    @latency.setter
+    def latency(self, latency):
+        """Sets the latency of this Link.
+
+
+        :param latency: The latency of this Link.  # noqa: E501
+        :type: float
+        """
+
+        self._latency = latency
+
+    @property
+    def packet_loss(self):
+        """Gets the packet_loss of this Link.  # noqa: E501
+
+
+        :return: The packet_loss of this Link.  # noqa: E501
+        :rtype: float
+        """
+        return self._packet_loss
+
+    @packet_loss.setter
+    def packet_loss(self, packet_loss):
+        """Sets the packet_loss of this Link.
+
+
+        :param packet_loss: The packet_loss of this Link.  # noqa: E501
+        :type: float
+        """
+
+        self._packet_loss = packet_loss
+
+    @property
+    def availability(self):
+        """Gets the availability of this Link.  # noqa: E501
+
+
+        :return: The availability of this Link.  # noqa: E501
+        :rtype: float
+        """
+        return self._availability
+
+    @availability.setter
+    def availability(self, availability):
+        """Sets the availability of this Link.
+
+
+        :param availability: The availability of this Link.  # noqa: E501
+        :type: float
+        """
+
+        self._availability = availability
 
     def to_dict(self):
         """Returns the model properties as a dict"""
