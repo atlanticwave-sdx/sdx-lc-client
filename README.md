@@ -100,13 +100,13 @@ Class | Method | HTTP request | Description
 *NodeApi* | [**add_node**](docs/NodeApi.md#add_node) | **POST** /node | add a new node to the topology
 *NodeApi* | [**delete_node**](docs/NodeApi.md#delete_node) | **DELETE** /node | Deletes a node
 *NodeApi* | [**get_node**](docs/NodeApi.md#get_node) | **GET** /node | get an existing node
+*NodeApi* | [**update_node**](docs/NodeApi.md#update_node) | **PUT** /node | Update an existing node
 *TopologyApi* | [**add_topology**](docs/TopologyApi.md#add_topology) | **POST** /topology | Send a new topology to SDX-LC
 *TopologyApi* | [**delete_topology**](docs/TopologyApi.md#delete_topology) | **DELETE** /topology | Deletes a topology
 *TopologyApi* | [**delete_topology_version**](docs/TopologyApi.md#delete_topology_version) | **DELETE** /topology/{version} | Deletes a topology version
 *TopologyApi* | [**get_topology**](docs/TopologyApi.md#get_topology) | **GET** /topology | get an existing topology
 *TopologyApi* | [**get_topologyby_version**](docs/TopologyApi.md#get_topologyby_version) | **GET** /topology/{version} | Find topology by version
 *TopologyApi* | [**topology_version**](docs/TopologyApi.md#topology_version) | **GET** /topology/version | Finds topology version
-*TopologyApi* | [**update_node**](docs/TopologyApi.md#update_node) | **PUT** /node | Update an existing node
 *TopologyApi* | [**update_topology**](docs/TopologyApi.md#update_topology) | **PUT** /topology | Update an existing topology
 *TopologyApi* | [**upload_file**](docs/TopologyApi.md#upload_file) | **POST** /topology/{topologyId}/uploadImage | uploads an topology image
 *UserApi* | [**create_user**](docs/UserApi.md#create_user) | **POST** /user | Create user

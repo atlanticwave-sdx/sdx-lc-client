@@ -49,6 +49,13 @@ class TestNodeApi(unittest.TestCase):
         """
         pass
 
+    def test_update_node(self):
+        """Test case for update_node
+
+        Update an existing node  # noqa: E501
+        """
+        pass
+
 
 if __name__ == '__main__':
     unittest.main()

@@ -10,7 +10,6 @@ Method | HTTP request | Description
 [**get_topology**](TopologyApi.md#get_topology) | **GET** /topology | get an existing topology
 [**get_topologyby_version**](TopologyApi.md#get_topologyby_version) | **GET** /topology/{version} | Find topology by version
 [**topology_version**](TopologyApi.md#topology_version) | **GET** /topology/version | Finds topology version
-[**update_node**](TopologyApi.md#update_node) | **PUT** /node | Update an existing node
 [**update_topology**](TopologyApi.md#update_topology) | **PUT** /topology | Update an existing topology
 [**upload_file**](TopologyApi.md#upload_file) | **POST** /topology/{topologyId}/uploadImage | uploads an topology image
 
@@ -316,57 +315,6 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **update_node**
-> update_node(body)
-
-Update an existing node
-
-ID of node that needs to be updated.
-
-### Example
-```python
-from __future__ import print_function
-import time
-import swagger_client
-from swagger_client.rest import ApiException
-from pprint import pprint
-
-# Configure OAuth2 access token for authorization: topology_auth
-configuration = swagger_client.Configuration()
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# create an instance of the API class
-api_instance = swagger_client.TopologyApi(swagger_client.ApiClient(configuration))
-body = swagger_client.Node() # Node | node object that needs to be sent to the SDX LC
-
-try:
-    # Update an existing node
-    api_instance.update_node(body)
-except ApiException as e:
-    print("Exception when calling TopologyApi->update_node: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**Node**](Node.md)| node object that needs to be sent to the SDX LC | 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[topology_auth](../README.md#topology_auth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

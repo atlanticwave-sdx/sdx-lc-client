@@ -70,13 +70,6 @@ class TestTopologyApi(unittest.TestCase):
         """
         pass
 
-    def test_update_node(self):
-        """Test case for update_node
-
-        Update an existing node  # noqa: E501
-        """
-        pass
-
     def test_update_topology(self):
         """Test case for update_topology
 
