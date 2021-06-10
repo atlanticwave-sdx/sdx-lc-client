@@ -31,7 +31,7 @@ class Port(object):
         'id': 'str',
         'name': 'str',
         'short_name': 'str',
-        'node': 'Node',
+        'node': 'str',
         'label_range': 'list[str]'
     }
 
@@ -131,7 +131,7 @@ class Port(object):
 
 
         :return: The node of this Port.  # noqa: E501
-        :rtype: Node
+        :rtype: str
         """
         return self._node
 
@@ -141,7 +141,7 @@ class Port(object):
 
 
         :param node: The node of this Port.  # noqa: E501
-        :type: Node
+        :type: str
         """
         if node is None:
             raise ValueError("Invalid value for `node`, must not be `None`")  # noqa: E501
