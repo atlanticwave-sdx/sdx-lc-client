@@ -31,6 +31,7 @@ class Node(object):
         'id': 'str',
         'name': 'str',
         'short_name': 'str',
+        'location': 'Location',
         'ports': 'list[Port]'
     }
 
@@ -38,20 +39,23 @@ class Node(object):
         'id': 'id',
         'name': 'name',
         'short_name': 'short_name',
+        'location': 'location',
         'ports': 'ports'
     }
 
-    def __init__(self, id=None, name=None, short_name=None, ports=None):  # noqa: E501
+    def __init__(self, id=None, name=None, short_name=None, location=None, ports=None):  # noqa: E501
         """Node - a model defined in Swagger"""  # noqa: E501
         self._id = None
         self._name = None
         self._short_name = None
+        self._location = None
         self._ports = None
         self.discriminator = None
         self.id = id
         self.name = name
         if short_name is not None:
             self.short_name = short_name
+        self.location = location
         self.ports = ports
 
     @property
@@ -120,6 +124,29 @@ class Node(object):
         """
 
         self._short_name = short_name
+
+    @property
+    def location(self):
+        """Gets the location of this Node.  # noqa: E501
+
+
+        :return: The location of this Node.  # noqa: E501
+        :rtype: Location
+        """
+        return self._location
+
+    @location.setter
+    def location(self, location):
+        """Sets the location of this Node.
+
+
+        :param location: The location of this Node.  # noqa: E501
+        :type: Location
+        """
+        if location is None:
+            raise ValueError("Invalid value for `location`, must not be `None`")  # noqa: E501
+
+        self._location = location
 
     @property
     def ports(self):

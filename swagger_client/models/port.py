@@ -32,7 +32,7 @@ class Port(object):
         'name': 'str',
         'short_name': 'str',
         'node': 'str',
-        'label_range': 'list[str]'
+        'status': 'str'
     }
 
     attribute_map = {
@@ -40,23 +40,23 @@ class Port(object):
         'name': 'name',
         'short_name': 'short_name',
         'node': 'node',
-        'label_range': 'label_range'
+        'status': 'status'
     }
 
-    def __init__(self, id=None, name=None, short_name=None, node=None, label_range=None):  # noqa: E501
+    def __init__(self, id=None, name=None, short_name=None, node=None, status=None):  # noqa: E501
         """Port - a model defined in Swagger"""  # noqa: E501
         self._id = None
         self._name = None
         self._short_name = None
         self._node = None
-        self._label_range = None
+        self._status = None
         self.discriminator = None
         self.id = id
         self.name = name
         if short_name is not None:
             self.short_name = short_name
         self.node = node
-        self.label_range = label_range
+        self.status = status
 
     @property
     def id(self):
@@ -149,27 +149,27 @@ class Port(object):
         self._node = node
 
     @property
-    def label_range(self):
-        """Gets the label_range of this Port.  # noqa: E501
+    def status(self):
+        """Gets the status of this Port.  # noqa: E501
 
 
-        :return: The label_range of this Port.  # noqa: E501
-        :rtype: list[str]
+        :return: The status of this Port.  # noqa: E501
+        :rtype: str
         """
-        return self._label_range
+        return self._status
 
-    @label_range.setter
-    def label_range(self, label_range):
-        """Sets the label_range of this Port.
+    @status.setter
+    def status(self, status):
+        """Sets the status of this Port.
 
 
-        :param label_range: The label_range of this Port.  # noqa: E501
-        :type: list[str]
+        :param status: The status of this Port.  # noqa: E501
+        :type: str
         """
-        if label_range is None:
-            raise ValueError("Invalid value for `label_range`, must not be `None`")  # noqa: E501
+        if status is None:
+            raise ValueError("Invalid value for `status`, must not be `None`")  # noqa: E501
 
-        self._label_range = label_range
+        self._status = status
 
     def to_dict(self):
         """Returns the model properties as a dict"""

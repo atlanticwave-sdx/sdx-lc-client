@@ -27,6 +27,7 @@ from swagger_client.configuration import Configuration
 from swagger_client.models.api_response import ApiResponse
 from swagger_client.models.connection import Connection
 from swagger_client.models.link import Link
+from swagger_client.models.location import Location
 from swagger_client.models.node import Node
 from swagger_client.models.port import Port
 from swagger_client.models.topology import Topology
