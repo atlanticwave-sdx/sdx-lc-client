@@ -44,7 +44,7 @@ import swagger_client
 ```
 
 ### Run an unittest
-```>python -m unittest -v test.test_connection_api.TestConnectionApi.test_place_connection
+```python -m unittest -v test.test_connection_api.TestConnectionApi.test_place_connection
 ```
 
 ## Getting Started
