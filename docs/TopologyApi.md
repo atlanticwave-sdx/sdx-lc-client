@@ -329,12 +329,8 @@ import swagger_client
 from swagger_client.rest import ApiException
 from pprint import pprint
 
-# Configure OAuth2 access token for authorization: topology_auth
-configuration = swagger_client.Configuration()
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
 # create an instance of the API class
-api_instance = swagger_client.TopologyApi(swagger_client.ApiClient(configuration))
+api_instance = swagger_client.TopologyApi()
 body = swagger_client.Topology() # Topology | topology object that needs to be sent to the SDX LC
 
 try:
@@ -356,7 +352,7 @@ void (empty response body)
 
 ### Authorization
 
-[topology_auth](../README.md#topology_auth)
+No authorization required
 
 ### HTTP request headers
 

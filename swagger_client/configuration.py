@@ -17,6 +17,7 @@ import logging
 import multiprocessing
 import sys
 import urllib3
+import os
 
 import six
 from six.moves import http_client as httplib
@@ -46,7 +47,11 @@ class Configuration(six.with_metaclass(TypeWithDefault, object)):
     def __init__(self):
         """Constructor"""
         # Default Base url
-        self.host = "https://virtserver.swaggerhub.com/SDX-LC/1.0.0"
+        #self.host = "https://virtserver.swaggerhub.com/SDX-LC/1.0.0"
+        self.host = "http://{}:{}/SDX-LC/{}".format(
+            os.getenv('SDXLC_HOST'),
+            os.getenv('SDXLC_PORT'),
+            os.getenv('SDXLC_VERSION'))
         # Temp file folder for downloading files
         self.temp_folder_path = None
 

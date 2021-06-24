@@ -17,7 +17,7 @@ import unittest
 import swagger_client
 from swagger_client.api.connection_api import ConnectionApi  # noqa: E501
 from swagger_client.rest import ApiException
-
+from datetime import datetime
 
 class TestConnectionApi(unittest.TestCase):
     """ConnectionApi unit test stubs"""
@@ -47,8 +47,22 @@ class TestConnectionApi(unittest.TestCase):
 
         Place an connection request from the SDX-Controller  # noqa: E501
         """
-        pass
+        p1=swagger_client.Port(id='n1:p1',name='p1',short_name='eth1',node='n1',status='UP')
+        p2=swagger_client.Port(id='n2:p1',name='p2',short_name='eth2',node='n2',status='UP')
+        timestmp = '2021-06-24T00:05:23+04:00'
+        connection_body = swagger_client.Connection(id='test1',name='test1',ingress_port=p1, egress_port=p2,start_time=timestmp,end_time=timestmp)
+        try:
+            # create a connection
+            #logger.warning(connection_body)
+            api_response = self.api.place_connection(connection_body)
+            print(api_response)
+            #logger.warning(api_response)
+        except ApiException as e:
+            print(e)
+            #logger.warning("Exception when calling ConnectionApi->place_experiment: %s\n" % e)
+            return False
 
+        return True
 
 if __name__ == '__main__':
     unittest.main()
