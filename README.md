@@ -43,6 +43,10 @@ Then import the package:
 import swagger_client
 ```
 
+### Run an unittest
+```>python -m unittest -v test.test_connection_api.TestConnectionApi.test_place_connection
+```
+
 ## Getting Started
 
 Please follow the [installation procedure](#installation--usage) and then run the following:
