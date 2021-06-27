@@ -44,6 +44,7 @@ class TestNodeApi(unittest.TestCase):
             # create a connection
             #logger.warning(connection_body)
             api_response = self.api.add_node(node_body)
+            print(api_response)
             #logger.warning(api_response)
         except ApiException as e:
             print(e)
