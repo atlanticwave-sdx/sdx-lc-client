@@ -53,6 +53,7 @@ class Configuration(six.with_metaclass(TypeWithDefault, object)):
             os.getenv('SDXLC_PORT'),
             os.getenv('SDXLC_VERSION'))
         # Temp file folder for downloading files
+        # Temp file folder for downloading files
         self.temp_folder_path = None
 
         # Authentication Settings

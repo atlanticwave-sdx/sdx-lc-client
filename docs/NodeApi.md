@@ -10,7 +10,7 @@ Method | HTTP request | Description
 [**update_node**](NodeApi.md#update_node) | **PUT** /node | Update an existing node
 
 # **add_node**
-> add_node(body)
+> Node add_node(body)
 
 add a new node to the topology
 
@@ -28,7 +28,8 @@ body = swagger_client.Node() # Node | node object that needs to be sent to the S
 
 try:
     # add a new node to the topology
-    api_instance.add_node(body)
+    api_response = api_instance.add_node(body)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling NodeApi->add_node: %s\n" % e)
 ```
@@ -41,7 +42,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**Node**](Node.md)
 
 ### Authorization
 
@@ -50,7 +51,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json, text/plain
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

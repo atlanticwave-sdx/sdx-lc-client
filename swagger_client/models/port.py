@@ -33,7 +33,8 @@ class Port(object):
         'short_name': 'str',
         'node': 'str',
         'label_range': 'list[str]',
-        'status': 'str'
+        'status': 'str',
+        'private_attributes': 'list[str]'
     }
 
     attribute_map = {
@@ -42,10 +43,11 @@ class Port(object):
         'short_name': 'short_name',
         'node': 'node',
         'label_range': 'label_range',
-        'status': 'status'
+        'status': 'status',
+        'private_attributes': 'private_attributes'
     }
 
-    def __init__(self, id=None, name=None, short_name=None, node=None, label_range=None, status=None):  # noqa: E501
+    def __init__(self, id=None, name=None, short_name=None, node=None, label_range=None, status=None, private_attributes=None):  # noqa: E501
         """Port - a model defined in Swagger"""  # noqa: E501
         self._id = None
         self._name = None
@@ -53,6 +55,7 @@ class Port(object):
         self._node = None
         self._label_range = None
         self._status = None
+        self._private_attributes = None
         self.discriminator = None
         self.id = id
         self.name = name
@@ -62,6 +65,8 @@ class Port(object):
         if label_range is not None:
             self.label_range = label_range
         self.status = status
+        if private_attributes is not None:
+            self.private_attributes = private_attributes
 
     @property
     def id(self):
@@ -196,6 +201,27 @@ class Port(object):
             raise ValueError("Invalid value for `status`, must not be `None`")  # noqa: E501
 
         self._status = status
+
+    @property
+    def private_attributes(self):
+        """Gets the private_attributes of this Port.  # noqa: E501
+
+
+        :return: The private_attributes of this Port.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._private_attributes
+
+    @private_attributes.setter
+    def private_attributes(self, private_attributes):
+        """Sets the private_attributes of this Port.
+
+
+        :param private_attributes: The private_attributes of this Port.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._private_attributes = private_attributes
 
     def to_dict(self):
         """Returns the model properties as a dict"""

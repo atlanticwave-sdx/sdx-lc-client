@@ -30,7 +30,6 @@ class TestNodeApi(unittest.TestCase):
 
     def test_add_node(self):
         """Test case for add_node
-
         add a new node to the topology  # noqa: E501
         """
         p1=swagger_client.Port(id='n1:p1',name='p1',short_name='eth1',node='n1',status='UP')

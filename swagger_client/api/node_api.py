@@ -42,7 +42,7 @@ class NodeApi(object):
 
         :param async_req bool
         :param Node body: node object that needs to be sent to the SDX LC (required)
-        :return: None
+        :return: Node
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -63,7 +63,7 @@ class NodeApi(object):
 
         :param async_req bool
         :param Node body: node object that needs to be sent to the SDX LC (required)
-        :return: None
+        :return: Node
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -102,11 +102,10 @@ class NodeApi(object):
         body_params = None
         if 'body' in params:
             body_params = params['body']
-
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
-            
+            ['application/json', 'text/plain'])  # noqa: E501
+
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
             ['application/json'])  # noqa: E501

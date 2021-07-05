@@ -36,7 +36,10 @@ class Link(object):
         'available_bandwidth': 'float',
         'latency': 'float',
         'packet_loss': 'float',
-        'availability': 'float'
+        'availability': 'float',
+        'private_attributes': 'list[str]',
+        'time_stamp': 'datetime',
+        'measurement_period': 'LinkMeasurementPeriod'
     }
 
     attribute_map = {
@@ -48,10 +51,13 @@ class Link(object):
         'available_bandwidth': 'available_bandwidth',
         'latency': 'latency',
         'packet_loss': 'packet_loss',
-        'availability': 'availability'
+        'availability': 'availability',
+        'private_attributes': 'private_attributes',
+        'time_stamp': 'time_stamp',
+        'measurement_period': 'measurement_period'
     }
 
-    def __init__(self, id=None, name=None, short_name=None, ports=None, total_bandwidth=None, available_bandwidth=None, latency=None, packet_loss=None, availability=None):  # noqa: E501
+    def __init__(self, id=None, name=None, short_name=None, ports=None, total_bandwidth=None, available_bandwidth=None, latency=None, packet_loss=None, availability=None, private_attributes=None, time_stamp=None, measurement_period=None):  # noqa: E501
         """Link - a model defined in Swagger"""  # noqa: E501
         self._id = None
         self._name = None
@@ -62,6 +68,9 @@ class Link(object):
         self._latency = None
         self._packet_loss = None
         self._availability = None
+        self._private_attributes = None
+        self._time_stamp = None
+        self._measurement_period = None
         self.discriminator = None
         self.id = id
         self.name = name
@@ -78,6 +87,12 @@ class Link(object):
             self.packet_loss = packet_loss
         if availability is not None:
             self.availability = availability
+        if private_attributes is not None:
+            self.private_attributes = private_attributes
+        if time_stamp is not None:
+            self.time_stamp = time_stamp
+        if measurement_period is not None:
+            self.measurement_period = measurement_period
 
     @property
     def id(self):
@@ -273,6 +288,69 @@ class Link(object):
         """
 
         self._availability = availability
+
+    @property
+    def private_attributes(self):
+        """Gets the private_attributes of this Link.  # noqa: E501
+
+
+        :return: The private_attributes of this Link.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._private_attributes
+
+    @private_attributes.setter
+    def private_attributes(self, private_attributes):
+        """Sets the private_attributes of this Link.
+
+
+        :param private_attributes: The private_attributes of this Link.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._private_attributes = private_attributes
+
+    @property
+    def time_stamp(self):
+        """Gets the time_stamp of this Link.  # noqa: E501
+
+
+        :return: The time_stamp of this Link.  # noqa: E501
+        :rtype: datetime
+        """
+        return self._time_stamp
+
+    @time_stamp.setter
+    def time_stamp(self, time_stamp):
+        """Sets the time_stamp of this Link.
+
+
+        :param time_stamp: The time_stamp of this Link.  # noqa: E501
+        :type: datetime
+        """
+
+        self._time_stamp = time_stamp
+
+    @property
+    def measurement_period(self):
+        """Gets the measurement_period of this Link.  # noqa: E501
+
+
+        :return: The measurement_period of this Link.  # noqa: E501
+        :rtype: LinkMeasurementPeriod
+        """
+        return self._measurement_period
+
+    @measurement_period.setter
+    def measurement_period(self, measurement_period):
+        """Sets the measurement_period of this Link.
+
+
+        :param measurement_period: The measurement_period of this Link.  # noqa: E501
+        :type: LinkMeasurementPeriod
+        """
+
+        self._measurement_period = measurement_period
 
     def to_dict(self):
         """Returns the model properties as a dict"""

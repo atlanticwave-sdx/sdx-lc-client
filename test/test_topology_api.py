@@ -17,7 +17,6 @@ import unittest
 import swagger_client
 from swagger_client.api.topology_api import TopologyApi  # noqa: E501
 from swagger_client.rest import ApiException
-from datetime import datetime
 
 
 class TestTopologyApi(unittest.TestCase):
@@ -31,7 +30,6 @@ class TestTopologyApi(unittest.TestCase):
 
     def test_add_topology(self):
         """Test case for add_topology
-
         Send a new topology to SDX-LC  # noqa: E501
         """
         p1=swagger_client.Port(id='n1:p1',name='p1',short_name='eth1',node='n1',status='UP')

@@ -17,12 +17,9 @@ Python 2.7 and 3.4+
 If the python package is hosted on Github, you can install directly from Github
 
 ```sh
-pip install git+https://github.com/atlanticwave-sdx/sdx-lc-client.git
+pip install git+https://github.com/GIT_USER_ID/GIT_REPO_ID.git
 ```
-(you may need to run `pip` with root permission: `sudo pip install git+https://github.com/atlanticwave-sdx/sdx-lc-client.git`)
-
-then run:
-```source env```
+(you may need to run `pip` with root permission: `sudo pip install git+https://github.com/GIT_USER_ID/GIT_REPO_ID.git`)
 
 Then import the package:
 ```python
@@ -41,10 +38,6 @@ python setup.py install --user
 Then import the package:
 ```python
 import swagger_client
-```
-
-### Run an unittest
-```python -m unittest -v test.test_connection_api.TestConnectionApi.test_place_connection
 ```
 
 ## Getting Started
@@ -130,9 +123,11 @@ Class | Method | HTTP request | Description
  - [ApiResponse](docs/ApiResponse.md)
  - [Connection](docs/Connection.md)
  - [Link](docs/Link.md)
+ - [LinkMeasurementPeriod](docs/LinkMeasurementPeriod.md)
  - [Location](docs/Location.md)
  - [Node](docs/Node.md)
  - [Port](docs/Port.md)
+ - [Service](docs/Service.md)
  - [Topology](docs/Topology.md)
  - [User](docs/User.md)
 

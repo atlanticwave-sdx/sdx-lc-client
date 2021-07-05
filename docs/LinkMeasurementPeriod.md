@@ -1,15 +1,10 @@
-# Port
+# LinkMeasurementPeriod
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **str** |  | 
-**name** | **str** |  | 
-**short_name** | **str** |  | [optional] 
-**node** | **str** |  | 
-**label_range** | **list[str]** |  | [optional] 
-**status** | **str** |  | 
-**private_attributes** | **list[str]** |  | [optional] 
+**period** | **float** |  | [optional] 
+**time_unit** | **str** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

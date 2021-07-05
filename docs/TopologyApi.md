@@ -14,7 +14,7 @@ Method | HTTP request | Description
 [**upload_file**](TopologyApi.md#upload_file) | **POST** /topology/{topologyId}/uploadImage | uploads an topology image
 
 # **add_topology**
-> add_topology(body)
+> Topology add_topology(body)
 
 Send a new topology to SDX-LC
 
@@ -28,11 +28,12 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = swagger_client.TopologyApi()
-body = swagger_client.Topology() # Topology | topology object that needs to be sent to the SDX LC
+body = swagger_client.Topology() # Topology | placed for adding a new topology
 
 try:
     # Send a new topology to SDX-LC
-    api_instance.add_topology(body)
+    api_response = api_instance.add_topology(body)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling TopologyApi->add_topology: %s\n" % e)
 ```
@@ -41,11 +42,11 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**Topology**](Topology.md)| topology object that needs to be sent to the SDX LC | 
+ **body** | [**Topology**](Topology.md)| placed for adding a new topology | 
 
 ### Return type
 
-void (empty response body)
+[**Topology**](Topology.md)
 
 ### Authorization
 
@@ -54,7 +55,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

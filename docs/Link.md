@@ -12,6 +12,9 @@ Name | Type | Description | Notes
 **latency** | **float** |  | [optional] 
 **packet_loss** | **float** |  | [optional] 
 **availability** | **float** |  | [optional] 
+**private_attributes** | **list[str]** |  | [optional] 
+**time_stamp** | **datetime** |  | [optional] 
+**measurement_period** | [**LinkMeasurementPeriod**](LinkMeasurementPeriod.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

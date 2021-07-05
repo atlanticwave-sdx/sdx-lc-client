@@ -30,36 +30,46 @@ class Topology(object):
     swagger_types = {
         'id': 'str',
         'name': 'str',
+        'domain_service': 'Service',
         'version': 'int',
         'time_stamp': 'datetime',
         'nodes': 'list[Node]',
-        'links': 'list[Link]'
+        'links': 'list[Link]',
+        'private_attributes': 'list[str]'
     }
 
     attribute_map = {
         'id': 'id',
         'name': 'name',
+        'domain_service': 'domain_service',
         'version': 'version',
         'time_stamp': 'time_stamp',
         'nodes': 'nodes',
-        'links': 'links'
+        'links': 'links',
+        'private_attributes': 'private_attributes'
     }
 
-    def __init__(self, id=None, name=None, version=None, time_stamp=None, nodes=None, links=None):  # noqa: E501
+    def __init__(self, id=None, name=None, domain_service=None, version=None, time_stamp=None, nodes=None, links=None, private_attributes=None):  # noqa: E501
         """Topology - a model defined in Swagger"""  # noqa: E501
         self._id = None
         self._name = None
+        self._domain_service = None
         self._version = None
         self._time_stamp = None
         self._nodes = None
         self._links = None
+        self._private_attributes = None
         self.discriminator = None
         self.id = id
         self.name = name
+        if domain_service is not None:
+            self.domain_service = domain_service
         self.version = version
         self.time_stamp = time_stamp
         self.nodes = nodes
         self.links = links
+        if private_attributes is not None:
+            self.private_attributes = private_attributes
 
     @property
     def id(self):
@@ -106,6 +116,27 @@ class Topology(object):
             raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
 
         self._name = name
+
+    @property
+    def domain_service(self):
+        """Gets the domain_service of this Topology.  # noqa: E501
+
+
+        :return: The domain_service of this Topology.  # noqa: E501
+        :rtype: Service
+        """
+        return self._domain_service
+
+    @domain_service.setter
+    def domain_service(self, domain_service):
+        """Sets the domain_service of this Topology.
+
+
+        :param domain_service: The domain_service of this Topology.  # noqa: E501
+        :type: Service
+        """
+
+        self._domain_service = domain_service
 
     @property
     def version(self):
@@ -198,6 +229,27 @@ class Topology(object):
             raise ValueError("Invalid value for `links`, must not be `None`")  # noqa: E501
 
         self._links = links
+
+    @property
+    def private_attributes(self):
+        """Gets the private_attributes of this Topology.  # noqa: E501
+
+
+        :return: The private_attributes of this Topology.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._private_attributes
+
+    @private_attributes.setter
+    def private_attributes(self, private_attributes):
+        """Sets the private_attributes of this Topology.
+
+
+        :param private_attributes: The private_attributes of this Topology.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._private_attributes = private_attributes
 
     def to_dict(self):
         """Returns the model properties as a dict"""

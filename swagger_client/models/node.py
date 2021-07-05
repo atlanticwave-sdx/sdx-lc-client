@@ -32,7 +32,8 @@ class Node(object):
         'name': 'str',
         'short_name': 'str',
         'location': 'Location',
-        'ports': 'list[Port]'
+        'ports': 'list[Port]',
+        'private_attributes': 'list[str]'
     }
 
     attribute_map = {
@@ -40,16 +41,18 @@ class Node(object):
         'name': 'name',
         'short_name': 'short_name',
         'location': 'location',
-        'ports': 'ports'
+        'ports': 'ports',
+        'private_attributes': 'private_attributes'
     }
 
-    def __init__(self, id=None, name=None, short_name=None, location=None, ports=None):  # noqa: E501
+    def __init__(self, id=None, name=None, short_name=None, location=None, ports=None, private_attributes=None):  # noqa: E501
         """Node - a model defined in Swagger"""  # noqa: E501
         self._id = None
         self._name = None
         self._short_name = None
         self._location = None
         self._ports = None
+        self._private_attributes = None
         self.discriminator = None
         self.id = id
         self.name = name
@@ -57,6 +60,8 @@ class Node(object):
             self.short_name = short_name
         self.location = location
         self.ports = ports
+        if private_attributes is not None:
+            self.private_attributes = private_attributes
 
     @property
     def id(self):
@@ -170,6 +175,27 @@ class Node(object):
             raise ValueError("Invalid value for `ports`, must not be `None`")  # noqa: E501
 
         self._ports = ports
+
+    @property
+    def private_attributes(self):
+        """Gets the private_attributes of this Node.  # noqa: E501
+
+
+        :return: The private_attributes of this Node.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._private_attributes
+
+    @private_attributes.setter
+    def private_attributes(self, private_attributes):
+        """Sets the private_attributes of this Node.
+
+
+        :param private_attributes: The private_attributes of this Node.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._private_attributes = private_attributes
 
     def to_dict(self):
         """Returns the model properties as a dict"""
