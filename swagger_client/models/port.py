@@ -34,6 +34,7 @@ class Port(object):
         'node': 'str',
         'label_range': 'list[str]',
         'status': 'str',
+        'state': 'str',
         'private_attributes': 'list[str]'
     }
 
@@ -44,10 +45,11 @@ class Port(object):
         'node': 'node',
         'label_range': 'label_range',
         'status': 'status',
+        'state': 'state',
         'private_attributes': 'private_attributes'
     }
 
-    def __init__(self, id=None, name=None, short_name=None, node=None, label_range=None, status=None, private_attributes=None):  # noqa: E501
+    def __init__(self, id=None, name=None, short_name=None, node=None, label_range=None, status=None, state=None, private_attributes=None):  # noqa: E501
         """Port - a model defined in Swagger"""  # noqa: E501
         self._id = None
         self._name = None
@@ -55,6 +57,7 @@ class Port(object):
         self._node = None
         self._label_range = None
         self._status = None
+        self._state = None
         self._private_attributes = None
         self.discriminator = None
         self.id = id
@@ -65,6 +68,8 @@ class Port(object):
         if label_range is not None:
             self.label_range = label_range
         self.status = status
+        if state is not None:
+            self.state = state
         if private_attributes is not None:
             self.private_attributes = private_attributes
 
@@ -201,6 +206,27 @@ class Port(object):
             raise ValueError("Invalid value for `status`, must not be `None`")  # noqa: E501
 
         self._status = status
+
+    @property
+    def state(self):
+        """Gets the state of this Port.  # noqa: E501
+
+
+        :return: The state of this Port.  # noqa: E501
+        :rtype: str
+        """
+        return self._state
+
+    @state.setter
+    def state(self, state):
+        """Sets the state of this Port.
+
+
+        :param state: The state of this Port.  # noqa: E501
+        :type: str
+        """
+
+        self._state = state
 
     @property
     def private_attributes(self):

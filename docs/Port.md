@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **node** | **str** |  | 
 **label_range** | **list[str]** |  | [optional] 
 **status** | **str** |  | 
+**state** | **str** |  | [optional] 
 **private_attributes** | **list[str]** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

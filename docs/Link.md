@@ -7,11 +7,13 @@ Name | Type | Description | Notes
 **name** | **str** |  | 
 **short_name** | **str** |  | [optional] 
 **ports** | [**list[Port]**](Port.md) |  | 
-**total_bandwidth** | **float** |  | [optional] 
-**available_bandwidth** | **float** |  | [optional] 
+**bandwidth** | **float** |  | [optional] 
+**residual_bandwidth** | **float** |  | [optional] 
 **latency** | **float** |  | [optional] 
 **packet_loss** | **float** |  | [optional] 
 **availability** | **float** |  | [optional] 
+**status** | **str** |  | [optional] 
+**state** | **str** |  | [optional] 
 **private_attributes** | **list[str]** |  | [optional] 
 **time_stamp** | **datetime** |  | [optional] 
 **measurement_period** | [**LinkMeasurementPeriod**](LinkMeasurementPeriod.md) |  | [optional] 
