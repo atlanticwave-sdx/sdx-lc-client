@@ -15,6 +15,7 @@ jobs:
 
     runs-on: ubuntu-latest
 
+    # RabbitMQ is needed by sdx-lc.
     services:
       rabbitmq:
         image: rabbitmq:latest
@@ -55,6 +56,7 @@ jobs:
         # exit-zero treats all errors as warnings.
         python -m flake8 . --count --exit-zero --max-complexity=10 --statistics
 
+    # sdx-lc is needed by some of the tests.
     - name: Run sdx-lc
       run: |
         git clone https://github.com/atlanticwave-sdx/sdx-lc.git /tmp/sdx-lc
