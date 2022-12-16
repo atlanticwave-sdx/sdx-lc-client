@@ -61,6 +61,7 @@ jobs:
         cd sdx-lc
         pip install -r requirements.txt
         python -m swagger_server &
+        cd -
       env:
         SDX_MQ_IP: 'localhost'
         SDXLC_HOST: 'localhost'
