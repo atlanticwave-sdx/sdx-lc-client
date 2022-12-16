@@ -57,7 +57,7 @@ jobs:
 
     - name: Run sdx-lc
       run: |
-        git checkout https://github.com/atlanticwave-sdx/sdx-lc.git
+        git clone https://github.com/atlanticwave-sdx/sdx-lc.git
         cd sdx-lc
         pip install -r requirements.txt
         python -m swagger_server &
