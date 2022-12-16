@@ -15,9 +15,9 @@ from __future__ import absolute_import
 import unittest
 
 import swagger_client
-from swagger_client.models.link_measurement_period import (
+from swagger_client.models.link_measurement_period import (  # noqa: E501
     LinkMeasurementPeriod,
-)  # noqa: E501
+)
 from swagger_client.rest import ApiException
 
 

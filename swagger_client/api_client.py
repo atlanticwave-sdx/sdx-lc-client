@@ -13,18 +13,18 @@ from __future__ import absolute_import
 import datetime
 import json
 import mimetypes
-from multiprocessing.pool import ThreadPool
 import os
 import re
 import tempfile
+from multiprocessing.pool import ThreadPool
 
 # python 2 and python 3 compatibility library
 import six
 from six.moves.urllib.parse import quote
 
-from swagger_client.configuration import Configuration
 import swagger_client.models
 from swagger_client import rest
+from swagger_client.configuration import Configuration
 
 
 class ApiClient(object):
