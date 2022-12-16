@@ -32,32 +32,43 @@ class TestTopologyApi(unittest.TestCase):
         """Test case for add_topology
         Send a new topology to SDX-LC  # noqa: E501
         """
-        p1=swagger_client.Port(id='n1:p1',name='p1',short_name='eth1',node='n1',status='UP')
-        p2=swagger_client.Port(id='n2:p1',name='p2',short_name='eth2',node='n2',status='UP')
-        ps=[]
+        p1 = swagger_client.Port(
+            id="n1:p1", name="p1", short_name="eth1", node="n1", status="UP"
+        )
+        p2 = swagger_client.Port(
+            id="n2:p1", name="p2", short_name="eth2", node="n2", status="UP"
+        )
+        ps = []
         ps.append(p1)
         ps.append(p2)
         lt = swagger_client.Location(address="miami")
-        node = swagger_client.Node(id='node1',name='node1',location=lt,ports=ps)
-        ns=[]
+        node = swagger_client.Node(id="node1", name="node1", location=lt, ports=ps)
+        ns = []
         ns.append(node)
 
-        link = swagger_client.Link(id='link1',name='link1',ports=ps)
-        ls=[]
+        link = swagger_client.Link(id="link1", name="link1", ports=ps)
+        ls = []
         ls.append(link)
 
-        timestmp = '2021-06-24T04:56:07+00:00'
-        topology_body = swagger_client.Topology(id='topology1',name='topology1',nodes=ns,links=ls,version=1,time_stamp=timestmp)
+        timestmp = "2021-06-24T04:56:07+00:00"
+        topology_body = swagger_client.Topology(
+            id="topology1",
+            name="topology1",
+            nodes=ns,
+            links=ls,
+            version=1,
+            time_stamp=timestmp,
+        )
 
         try:
             # create a connection
-            #logger.warning(connection_body)
+            # logger.warning(connection_body)
             api_response = self.api.add_topology(topology_body)
             print(api_response)
-            #logger.warning(api_response)
+            # logger.warning(api_response)
         except ApiException as e:
             print(e)
-            #logger.warning("Exception when calling ConnectionApi->place_experiment: %s\n" % e)
+            # logger.warning("Exception when calling ConnectionApi->place_experiment: %s\n" % e)
             return False
 
         return True
@@ -112,5 +123,5 @@ class TestTopologyApi(unittest.TestCase):
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()
