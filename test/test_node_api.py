@@ -32,22 +32,28 @@ class TestNodeApi(unittest.TestCase):
         """Test case for add_node
         add a new node to the topology  # noqa: E501
         """
-        p1=swagger_client.Port(id='n1:p1',name='p1',short_name='eth1',node='n1',status='UP')
-        p2=swagger_client.Port(id='n2:p1',name='p2',short_name='eth2',node='n2',status='UP')
-        ps=[]
+        p1 = swagger_client.Port(
+            id="n1:p1", name="p1", short_name="eth1", node="n1", status="UP"
+        )
+        p2 = swagger_client.Port(
+            id="n2:p1", name="p2", short_name="eth2", node="n2", status="UP"
+        )
+        ps = []
         ps.append(p1)
-        #ps.append(p2)
-        lt = swagger_client.Location(address="miami",latitude=-28.51107891831147, longitude=-79.57947854792273)
-        node_body = swagger_client.Node(id='test1',name='test1',location=lt,ports=ps)
+        # ps.append(p2)
+        lt = swagger_client.Location(
+            address="miami", latitude=-28.51107891831147, longitude=-79.57947854792273
+        )
+        node_body = swagger_client.Node(id="test1", name="test1", location=lt, ports=ps)
         try:
             # create a connection
-            #logger.warning(connection_body)
+            # logger.warning(connection_body)
             api_response = self.api.add_node(node_body)
             print(api_response)
-            #logger.warning(api_response)
+            # logger.warning(api_response)
         except ApiException as e:
             print(e)
-            #logger.warning("Exception when calling ConnectionApi->place_experiment: %s\n" % e)
+            # logger.warning("Exception when calling ConnectionApi->place_experiment: %s\n" % e)
             return False
 
         return True
@@ -74,5 +80,5 @@ class TestNodeApi(unittest.TestCase):
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

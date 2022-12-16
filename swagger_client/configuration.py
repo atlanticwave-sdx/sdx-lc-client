@@ -47,11 +47,10 @@ class Configuration(six.with_metaclass(TypeWithDefault, object)):
     def __init__(self):
         """Constructor"""
         # Default Base url
-        #self.host = "https://virtserver.swaggerhub.com/SDX-LC/1.0.0"
+        # self.host = "https://virtserver.swaggerhub.com/SDX-LC/1.0.0"
         self.host = "http://{}:{}/SDX-LC/{}".format(
-            os.getenv('SDXLC_HOST'),
-            os.getenv('SDXLC_PORT'),
-            os.getenv('SDXLC_VERSION'))
+            os.getenv("SDXLC_HOST"), os.getenv("SDXLC_PORT"), os.getenv("SDXLC_VERSION")
+        )
         # Temp file folder for downloading files
         # Temp file folder for downloading files
         self.temp_folder_path = None
@@ -74,7 +73,7 @@ class Configuration(six.with_metaclass(TypeWithDefault, object)):
         self.logger["package_logger"] = logging.getLogger("swagger_client")
         self.logger["urllib3_logger"] = logging.getLogger("urllib3")
         # Log format
-        self.logger_format = '%(asctime)s %(levelname)s %(message)s'
+        self.logger_format = "%(asctime)s %(levelname)s %(message)s"
         # Log stream handler
         self.logger_stream_handler = None
         # Log file handler
@@ -107,7 +106,7 @@ class Configuration(six.with_metaclass(TypeWithDefault, object)):
         # Proxy URL
         self.proxy = None
         # Safe chars for path_param
-        self.safe_chars_for_path_param = ''
+        self.safe_chars_for_path_param = ""
 
     @property
     def logger_file(self):
@@ -228,8 +227,8 @@ class Configuration(six.with_metaclass(TypeWithDefault, object)):
         :return: The token for basic HTTP authentication.
         """
         return urllib3.util.make_headers(
-            basic_auth=self.username + ':' + self.password
-        ).get('authorization')
+            basic_auth=self.username + ":" + self.password
+        ).get("authorization")
 
     def auth_settings(self):
         """Gets Auth Settings dict for api client.
@@ -237,20 +236,18 @@ class Configuration(six.with_metaclass(TypeWithDefault, object)):
         :return: The Auth Settings information dict.
         """
         return {
-            'api_key':
-                {
-                    'type': 'api_key',
-                    'in': 'header',
-                    'key': 'api_key',
-                    'value': self.get_api_key_with_prefix('api_key')
-                },
-            'topology_auth':
-                {
-                    'type': 'oauth2',
-                    'in': 'header',
-                    'key': 'Authorization',
-                    'value': 'Bearer ' + self.access_token
-                },
+            "api_key": {
+                "type": "api_key",
+                "in": "header",
+                "key": "api_key",
+                "value": self.get_api_key_with_prefix("api_key"),
+            },
+            "topology_auth": {
+                "type": "oauth2",
+                "in": "header",
+                "key": "Authorization",
+                "value": "Bearer " + self.access_token,
+            },
         }
 
     def to_debug_report(self):
@@ -258,9 +255,10 @@ class Configuration(six.with_metaclass(TypeWithDefault, object)):
 
         :return: The report for debugging.
         """
-        return "Python SDK Debug Report:\n"\
-               "OS: {env}\n"\
-               "Python Version: {pyversion}\n"\
-               "Version of the API: 1.0.0\n"\
-               "SDK Package Version: 1.0.0".\
-               format(env=sys.platform, pyversion=sys.version)
+        return (
+            "Python SDK Debug Report:\n"
+            "OS: {env}\n"
+            "Python Version: {pyversion}\n"
+            "Version of the API: 1.0.0\n"
+            "SDK Package Version: 1.0.0".format(env=sys.platform, pyversion=sys.version)
+        )

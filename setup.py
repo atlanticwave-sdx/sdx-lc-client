@@ -35,5 +35,5 @@ setup(
     include_package_data=True,
     long_description="""\
     You can find out more about Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).   # noqa: E501
-    """
+    """,
 )
