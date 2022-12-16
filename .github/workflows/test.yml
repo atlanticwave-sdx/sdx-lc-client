@@ -77,7 +77,7 @@ jobs:
         SUB_QUEUE: 'connection'
         SUB_EXCHANGE: 'connection'
 
-    - name: Test with tox
+    - name: Run tests
       run: |
         python -m tox
       env:
