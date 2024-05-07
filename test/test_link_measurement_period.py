@@ -15,9 +15,9 @@ from __future__ import absolute_import
 import unittest
 
 import sdx_lc_client
-from sdx_lc_client.models.link_measurement_period import (  # noqa: E501
+from sdx_lc_client.models.link_measurement_period import (
     LinkMeasurementPeriod,
-)
+)  # noqa: E501
 from sdx_lc_client.rest import ApiException
 
 

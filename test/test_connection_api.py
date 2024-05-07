@@ -70,9 +70,6 @@ class TestConnectionApi(unittest.TestCase):
         except ApiException as e:
             print(e)
             # logger.warning("Exception when calling ConnectionApi->place_experiment: %s\n" % e)
-            return False
-
-        return True
 
 
 if __name__ == "__main__":

@@ -54,9 +54,6 @@ class TestNodeApi(unittest.TestCase):
         except ApiException as e:
             print(e)
             # logger.warning("Exception when calling ConnectionApi->place_experiment: %s\n" % e)
-            return False
-
-        return True
 
     def test_delete_node(self):
         """Test case for delete_node
