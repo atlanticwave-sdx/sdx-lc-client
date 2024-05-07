@@ -71,9 +71,9 @@ class RESTClientObject(object):
 
         addition_pool_args = {}
         if configuration.assert_hostname is not None:
-            addition_pool_args[
-                "assert_hostname"
-            ] = configuration.assert_hostname  # noqa: E501
+            addition_pool_args["assert_hostname"] = (
+                configuration.assert_hostname
+            )  # noqa: E501
 
         if maxsize is None:
             if configuration.connection_pool_maxsize is not None:
