@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **status** | **str** |  | [optional] 
 **state** | **str** |  | [optional] 
 **private_attributes** | **list[str]** |  | [optional] 
-**time_stamp** | **datetime** |  | [optional] 
+**timestamp** | **datetime** |  | [optional] 
 **measurement_period** | [**LinkMeasurementPeriod**](LinkMeasurementPeriod.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

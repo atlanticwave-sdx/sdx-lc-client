@@ -1,6 +1,6 @@
 # swagger_client.NodeApi
 
-All URIs are relative to *https://virtserver.swaggerhub.com/SDX-LC/1.0.0*
+All URIs are relative to *https://virtserver.swaggerhub.com/SDX-LC/2.0.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -56,7 +56,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_node**
-> delete_node(node_id, api_key=api_key)
+> delete_node(node_id)
 
 Deletes a node
 
@@ -71,11 +71,10 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = swagger_client.NodeApi()
 node_id = 789 # int | ID of node to delete
-api_key = 'api_key_example' # str |  (optional)
 
 try:
     # Deletes a node
-    api_instance.delete_node(node_id, api_key=api_key)
+    api_instance.delete_node(node_id)
 except ApiException as e:
     print("Exception when calling NodeApi->delete_node: %s\n" % e)
 ```
@@ -85,7 +84,6 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **node_id** | **int**| ID of node to delete | 
- **api_key** | **str**|  | [optional] 
 
 ### Return type
 

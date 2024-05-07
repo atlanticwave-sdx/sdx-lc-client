@@ -1,6 +1,6 @@
 # swagger_client.TopologyApi
 
-All URIs are relative to *https://virtserver.swaggerhub.com/SDX-LC/1.0.0*
+All URIs are relative to *https://virtserver.swaggerhub.com/SDX-LC/2.0.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -11,7 +11,7 @@ Method | HTTP request | Description
 [**get_topologyby_version**](TopologyApi.md#get_topologyby_version) | **GET** /topology/{version} | Find topology by version
 [**topology_version**](TopologyApi.md#topology_version) | **GET** /topology/version | Finds topology version
 [**update_topology**](TopologyApi.md#update_topology) | **PUT** /topology | Update an existing topology
-[**upload_file**](TopologyApi.md#upload_file) | **POST** /topology/{topologyId}/uploadImage | uploads an topology image
+[**upload_file**](TopologyApi.md#upload_file) | **POST** /topology/{topology_id}/uploadImage | uploads an topology image
 
 # **add_topology**
 > Topology add_topology(body)
@@ -60,7 +60,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_topology**
-> delete_topology(topology_id, api_key=api_key)
+> delete_topology(topology_id)
 
 Deletes a topology
 
@@ -72,18 +72,13 @@ import swagger_client
 from swagger_client.rest import ApiException
 from pprint import pprint
 
-# Configure OAuth2 access token for authorization: topology_auth
-configuration = swagger_client.Configuration()
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
 # create an instance of the API class
-api_instance = swagger_client.TopologyApi(swagger_client.ApiClient(configuration))
+api_instance = swagger_client.TopologyApi()
 topology_id = 789 # int | ID of topology to delete
-api_key = 'api_key_example' # str |  (optional)
 
 try:
     # Deletes a topology
-    api_instance.delete_topology(topology_id, api_key=api_key)
+    api_instance.delete_topology(topology_id)
 except ApiException as e:
     print("Exception when calling TopologyApi->delete_topology: %s\n" % e)
 ```
@@ -93,7 +88,6 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **topology_id** | **int**| ID of topology to delete | 
- **api_key** | **str**|  | [optional] 
 
 ### Return type
 
@@ -101,7 +95,7 @@ void (empty response body)
 
 ### Authorization
 
-[topology_auth](../README.md#topology_auth)
+No authorization required
 
 ### HTTP request headers
 
@@ -111,7 +105,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_topology_version**
-> delete_topology_version(topology_id, version, api_key=api_key)
+> delete_topology_version(topology_id, version)
 
 Deletes a topology version
 
@@ -123,19 +117,14 @@ import swagger_client
 from swagger_client.rest import ApiException
 from pprint import pprint
 
-# Configure OAuth2 access token for authorization: topology_auth
-configuration = swagger_client.Configuration()
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
 # create an instance of the API class
-api_instance = swagger_client.TopologyApi(swagger_client.ApiClient(configuration))
+api_instance = swagger_client.TopologyApi()
 topology_id = 789 # int | ID of topology to return
 version = 789 # int | topology version to delete
-api_key = 'api_key_example' # str |  (optional)
 
 try:
     # Deletes a topology version
-    api_instance.delete_topology_version(topology_id, version, api_key=api_key)
+    api_instance.delete_topology_version(topology_id, version)
 except ApiException as e:
     print("Exception when calling TopologyApi->delete_topology_version: %s\n" % e)
 ```
@@ -146,7 +135,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **topology_id** | **int**| ID of topology to return | 
  **version** | **int**| topology version to delete | 
- **api_key** | **str**|  | [optional] 
 
 ### Return type
 
@@ -154,7 +142,7 @@ void (empty response body)
 
 ### Authorization
 
-[topology_auth](../README.md#topology_auth)
+No authorization required
 
 ### HTTP request headers
 
@@ -222,14 +210,8 @@ import swagger_client
 from swagger_client.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: api_key
-configuration = swagger_client.Configuration()
-configuration.api_key['api_key'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['api_key'] = 'Bearer'
-
 # create an instance of the API class
-api_instance = swagger_client.TopologyApi(swagger_client.ApiClient(configuration))
+api_instance = swagger_client.TopologyApi()
 topology_id = 789 # int | ID of topology to return
 version = 789 # int | version of topology to return
 
@@ -254,7 +236,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[api_key](../README.md#api_key)
+No authorization required
 
 ### HTTP request headers
 
@@ -278,12 +260,8 @@ import swagger_client
 from swagger_client.rest import ApiException
 from pprint import pprint
 
-# Configure OAuth2 access token for authorization: topology_auth
-configuration = swagger_client.Configuration()
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
 # create an instance of the API class
-api_instance = swagger_client.TopologyApi(swagger_client.ApiClient(configuration))
+api_instance = swagger_client.TopologyApi()
 topology_id = 'topology_id_example' # str | topology id
 
 try:
@@ -306,7 +284,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[topology_auth](../README.md#topology_auth)
+No authorization required
 
 ### HTTP request headers
 
@@ -375,12 +353,8 @@ import swagger_client
 from swagger_client.rest import ApiException
 from pprint import pprint
 
-# Configure OAuth2 access token for authorization: topology_auth
-configuration = swagger_client.Configuration()
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
 # create an instance of the API class
-api_instance = swagger_client.TopologyApi(swagger_client.ApiClient(configuration))
+api_instance = swagger_client.TopologyApi()
 topology_id = 789 # int | ID of topology to update
 body = swagger_client.Object() # Object |  (optional)
 
@@ -405,7 +379,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[topology_auth](../README.md#topology_auth)
+No authorization required
 
 ### HTTP request headers
 
