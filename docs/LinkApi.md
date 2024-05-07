@@ -1,4 +1,4 @@
-# swagger_client.LinkApi
+# sdx_lc_client.LinkApi
 
 All URIs are relative to *https://virtserver.swaggerhub.com/SDX-LC/2.0.0*
 
@@ -18,13 +18,13 @@ add a new link to the topology
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import sdx_lc_client
+from sdx_lc_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.LinkApi()
-body = swagger_client.Link() # Link | link object that needs to be sent to the SDX LC
+api_instance = sdx_lc_client.LinkApi()
+body = sdx_lc_client.Link() # Link | link object that needs to be sent to the SDX LC
 
 try:
     # add a new link to the topology
@@ -63,12 +63,12 @@ Deletes a link
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import sdx_lc_client
+from sdx_lc_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.LinkApi()
+api_instance = sdx_lc_client.LinkApi()
 node_id = 789 # int | ID of link to delete
 
 try:
@@ -110,12 +110,12 @@ ID of the link
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import sdx_lc_client
+from sdx_lc_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.LinkApi()
+api_instance = sdx_lc_client.LinkApi()
 
 try:
     # get an existing link
@@ -153,13 +153,13 @@ ID of link that needs to be updated.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import sdx_lc_client
+from sdx_lc_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.LinkApi()
-body = swagger_client.Link() # Link | link object that needs to be sent to the SDX LC
+api_instance = sdx_lc_client.LinkApi()
+body = sdx_lc_client.Link() # Link | link object that needs to be sent to the SDX LC
 
 try:
     # Update an existing link

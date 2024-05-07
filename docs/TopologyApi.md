@@ -1,4 +1,4 @@
-# swagger_client.TopologyApi
+# sdx_lc_client.TopologyApi
 
 All URIs are relative to *https://virtserver.swaggerhub.com/SDX-LC/2.0.0*
 
@@ -22,13 +22,13 @@ Send a new topology to SDX-LC
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import sdx_lc_client
+from sdx_lc_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.TopologyApi()
-body = swagger_client.Topology() # Topology | placed for adding a new topology
+api_instance = sdx_lc_client.TopologyApi()
+body = sdx_lc_client.Topology() # Topology | placed for adding a new topology
 
 try:
     # Send a new topology to SDX-LC
@@ -68,12 +68,12 @@ Deletes a topology
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import sdx_lc_client
+from sdx_lc_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.TopologyApi()
+api_instance = sdx_lc_client.TopologyApi()
 topology_id = 789 # int | ID of topology to delete
 
 try:
@@ -113,12 +113,12 @@ Deletes a topology version
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import sdx_lc_client
+from sdx_lc_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.TopologyApi()
+api_instance = sdx_lc_client.TopologyApi()
 topology_id = 789 # int | ID of topology to return
 version = 789 # int | topology version to delete
 
@@ -162,12 +162,12 @@ ID of the topology
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import sdx_lc_client
+from sdx_lc_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.TopologyApi()
+api_instance = sdx_lc_client.TopologyApi()
 
 try:
     # get an existing topology
@@ -206,12 +206,12 @@ Returns a single topology
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import sdx_lc_client
+from sdx_lc_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.TopologyApi()
+api_instance = sdx_lc_client.TopologyApi()
 topology_id = 789 # int | ID of topology to return
 version = 789 # int | version of topology to return
 
@@ -256,12 +256,12 @@ Topology version
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import sdx_lc_client
+from sdx_lc_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.TopologyApi()
+api_instance = sdx_lc_client.TopologyApi()
 topology_id = 'topology_id_example' # str | topology id
 
 try:
@@ -304,13 +304,13 @@ ID of topology that needs to be updated. \\\\ The topology update only updates t
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import sdx_lc_client
+from sdx_lc_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.TopologyApi()
-body = swagger_client.Topology() # Topology | topology object that needs to be sent to the SDX LC
+api_instance = sdx_lc_client.TopologyApi()
+body = sdx_lc_client.Topology() # Topology | topology object that needs to be sent to the SDX LC
 
 try:
     # Update an existing topology
@@ -349,14 +349,14 @@ uploads an topology image
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import sdx_lc_client
+from sdx_lc_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.TopologyApi()
+api_instance = sdx_lc_client.TopologyApi()
 topology_id = 789 # int | ID of topology to update
-body = swagger_client.Object() # Object |  (optional)
+body = sdx_lc_client.Object() # Object |  (optional)
 
 try:
     # uploads an topology image

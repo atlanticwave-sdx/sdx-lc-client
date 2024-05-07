@@ -1,4 +1,4 @@
-# swagger_client.ConnectionApi
+# sdx_lc_client.ConnectionApi
 
 All URIs are relative to *https://virtserver.swaggerhub.com/SDX-LC/2.0.0*
 
@@ -19,12 +19,12 @@ delete a connection
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import sdx_lc_client
+from sdx_lc_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ConnectionApi()
+api_instance = sdx_lc_client.ConnectionApi()
 connection_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # str | ID of the connection that needs to be deleted
 
 try:
@@ -66,12 +66,12 @@ connection details
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import sdx_lc_client
+from sdx_lc_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ConnectionApi()
+api_instance = sdx_lc_client.ConnectionApi()
 connection_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # str | ID of connection that needs to be fetched
 
 try:
@@ -112,13 +112,13 @@ Place an connection request from the SDX-Controller
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import sdx_lc_client
+from sdx_lc_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ConnectionApi()
-body = swagger_client.Connection() # Connection | order placed for creating a connection
+api_instance = sdx_lc_client.ConnectionApi()
+body = sdx_lc_client.Connection() # Connection | order placed for creating a connection
 
 try:
     # Place an connection request from the SDX-Controller

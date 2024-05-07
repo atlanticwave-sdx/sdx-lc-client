@@ -1,4 +1,4 @@
-# swagger_client.NodeApi
+# sdx_lc_client.NodeApi
 
 All URIs are relative to *https://virtserver.swaggerhub.com/SDX-LC/2.0.0*
 
@@ -18,13 +18,13 @@ add a new node to the topology
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import sdx_lc_client
+from sdx_lc_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.NodeApi()
-body = swagger_client.Node() # Node | node object that needs to be sent to the SDX LC
+api_instance = sdx_lc_client.NodeApi()
+body = sdx_lc_client.Node() # Node | node object that needs to be sent to the SDX LC
 
 try:
     # add a new node to the topology
@@ -64,12 +64,12 @@ Deletes a node
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import sdx_lc_client
+from sdx_lc_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.NodeApi()
+api_instance = sdx_lc_client.NodeApi()
 node_id = 789 # int | ID of node to delete
 
 try:
@@ -111,12 +111,12 @@ ID of the node
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import sdx_lc_client
+from sdx_lc_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.NodeApi()
+api_instance = sdx_lc_client.NodeApi()
 
 try:
     # get an existing node
@@ -154,13 +154,13 @@ ID of node that needs to be updated.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import sdx_lc_client
+from sdx_lc_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.NodeApi()
-body = swagger_client.Node() # Node | node object that needs to be sent to the SDX LC
+api_instance = sdx_lc_client.NodeApi()
+body = sdx_lc_client.Node() # Node | node object that needs to be sent to the SDX LC
 
 try:
     # Update an existing node

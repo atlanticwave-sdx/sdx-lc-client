@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.node import Node  # noqa: E501
-from swagger_client.rest import ApiException
+import sdx_lc_client
+from sdx_lc_client.models.node import Node  # noqa: E501
+from sdx_lc_client.rest import ApiException
 
 
 class TestNode(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestNode(unittest.TestCase):
     def testNode(self):
         """Test Node"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.node.Node()  # noqa: E501
+        # model = sdx_lc_client.models.node.Node()  # noqa: E501
         pass
 
 

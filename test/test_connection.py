@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.connection import Connection  # noqa: E501
-from swagger_client.rest import ApiException
+import sdx_lc_client
+from sdx_lc_client.models.connection import Connection  # noqa: E501
+from sdx_lc_client.rest import ApiException
 
 
 class TestConnection(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestConnection(unittest.TestCase):
     def testConnection(self):
         """Test Connection"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.connection.Connection()  # noqa: E501
+        # model = sdx_lc_client.models.connection.Connection()  # noqa: E501
         pass
 
 

@@ -14,11 +14,11 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.link_measurement_period import (
+import sdx_lc_client
+from sdx_lc_client.models.link_measurement_period import (
     LinkMeasurementPeriod,
 )  # noqa: E501
-from swagger_client.rest import ApiException
+from sdx_lc_client.rest import ApiException
 
 
 class TestLinkMeasurementPeriod(unittest.TestCase):
@@ -33,7 +33,7 @@ class TestLinkMeasurementPeriod(unittest.TestCase):
     def testLinkMeasurementPeriod(self):
         """Test LinkMeasurementPeriod"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.link_measurement_period.LinkMeasurementPeriod()  # noqa: E501
+        # model = sdx_lc_client.models.link_measurement_period.LinkMeasurementPeriod()  # noqa: E501
         pass
 
 
