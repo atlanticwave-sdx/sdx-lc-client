@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.api.connection_api import ConnectionApi  # noqa: E501
-from swagger_client.rest import ApiException
+import sdx_lc_client
+from sdx_lc_client.api.connection_api import ConnectionApi  # noqa: E501
+from sdx_lc_client.rest import ApiException
 
 
 class TestConnectionApi(unittest.TestCase):
@@ -46,14 +46,14 @@ class TestConnectionApi(unittest.TestCase):
         """Test case for place_connection
         Place an connection request from the SDX-Controller  # noqa: E501
         """
-        p1 = swagger_client.Port(
+        p1 = sdx_lc_client.Port(
             id="n1:p1", name="p1", short_name="eth1", node="n1", status="UP"
         )
-        p2 = swagger_client.Port(
+        p2 = sdx_lc_client.Port(
             id="n2:p1", name="p2", short_name="eth2", node="n2", status="UP"
         )
         timestmp = "2021-06-24T00:05:23+04:00"
-        connection_body = swagger_client.Connection(
+        connection_body = sdx_lc_client.Connection(
             id="test1",
             name="test1",
             ingress_port=p1,
@@ -70,9 +70,6 @@ class TestConnectionApi(unittest.TestCase):
         except ApiException as e:
             print(e)
             # logger.warning("Exception when calling ConnectionApi->place_experiment: %s\n" % e)
-            return False
-
-        return True
 
 
 if __name__ == "__main__":

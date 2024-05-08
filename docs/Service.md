@@ -3,6 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**l2vpn_ptp** | **object** |  | [optional] 
+**l2vpn_ptmp** | **object** |  | [optional] 
 **monitoring_capability** | **str** |  | [optional] 
 **owner** | **str** |  | [optional] 
 **private_attributes** | **list[str]** |  | [optional] 

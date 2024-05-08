@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.topology import Topology  # noqa: E501
-from swagger_client.rest import ApiException
+import sdx_lc_client
+from sdx_lc_client.models.topology import Topology  # noqa: E501
+from sdx_lc_client.rest import ApiException
 
 
 class TestTopology(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestTopology(unittest.TestCase):
     def testTopology(self):
         """Test Topology"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.topology.Topology()  # noqa: E501
+        # model = sdx_lc_client.models.topology.Topology()  # noqa: E501
         pass
 
 

@@ -1,6 +1,6 @@
-# swagger_client.LinkApi
+# sdx_lc_client.LinkApi
 
-All URIs are relative to *https://virtserver.swaggerhub.com/SDX-LC/1.0.0*
+All URIs are relative to *https://virtserver.swaggerhub.com/SDX-LC/2.0.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -18,17 +18,13 @@ add a new link to the topology
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import sdx_lc_client
+from sdx_lc_client.rest import ApiException
 from pprint import pprint
 
-# Configure OAuth2 access token for authorization: topology_auth
-configuration = swagger_client.Configuration()
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
 # create an instance of the API class
-api_instance = swagger_client.LinkApi(swagger_client.ApiClient(configuration))
-body = swagger_client.Link() # Link | link object that needs to be sent to the SDX LC
+api_instance = sdx_lc_client.LinkApi()
+body = sdx_lc_client.Link() # Link | link object that needs to be sent to the SDX LC
 
 try:
     # add a new link to the topology
@@ -49,7 +45,7 @@ void (empty response body)
 
 ### Authorization
 
-[topology_auth](../README.md#topology_auth)
+No authorization required
 
 ### HTTP request headers
 
@@ -59,7 +55,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_link**
-> delete_link(node_id, api_key=api_key)
+> delete_link(node_id)
 
 Deletes a link
 
@@ -67,22 +63,17 @@ Deletes a link
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import sdx_lc_client
+from sdx_lc_client.rest import ApiException
 from pprint import pprint
 
-# Configure OAuth2 access token for authorization: topology_auth
-configuration = swagger_client.Configuration()
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
 # create an instance of the API class
-api_instance = swagger_client.LinkApi(swagger_client.ApiClient(configuration))
+api_instance = sdx_lc_client.LinkApi()
 node_id = 789 # int | ID of link to delete
-api_key = 'api_key_example' # str |  (optional)
 
 try:
     # Deletes a link
-    api_instance.delete_link(node_id, api_key=api_key)
+    api_instance.delete_link(node_id)
 except ApiException as e:
     print("Exception when calling LinkApi->delete_link: %s\n" % e)
 ```
@@ -92,7 +83,6 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **node_id** | **int**| ID of link to delete | 
- **api_key** | **str**|  | [optional] 
 
 ### Return type
 
@@ -100,7 +90,7 @@ void (empty response body)
 
 ### Authorization
 
-[topology_auth](../README.md#topology_auth)
+No authorization required
 
 ### HTTP request headers
 
@@ -120,12 +110,12 @@ ID of the link
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import sdx_lc_client
+from sdx_lc_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.LinkApi()
+api_instance = sdx_lc_client.LinkApi()
 
 try:
     # get an existing link
@@ -163,13 +153,13 @@ ID of link that needs to be updated.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import sdx_lc_client
+from sdx_lc_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.LinkApi()
-body = swagger_client.Link() # Link | link object that needs to be sent to the SDX LC
+api_instance = sdx_lc_client.LinkApi()
+body = sdx_lc_client.Link() # Link | link object that needs to be sent to the SDX LC
 
 try:
     # Update an existing link

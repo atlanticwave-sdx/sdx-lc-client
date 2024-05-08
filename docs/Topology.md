@@ -5,9 +5,10 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **str** |  | 
 **name** | **str** |  | 
-**domain_service** | [**Service**](Service.md) |  | [optional] 
+**services** | [**Service**](Service.md) |  | [optional] 
 **version** | **int** |  | 
-**time_stamp** | **datetime** |  | 
+**model_version** | **str** |  | [optional] 
+**timestamp** | **datetime** |  | 
 **nodes** | [**list[Node]**](Node.md) |  | 
 **links** | [**list[Link]**](Link.md) |  | 
 **private_attributes** | **list[str]** |  | [optional] 

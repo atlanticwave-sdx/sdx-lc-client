@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.api.topology_api import TopologyApi  # noqa: E501
-from swagger_client.rest import ApiException
+import sdx_lc_client
+from sdx_lc_client.api.topology_api import TopologyApi  # noqa: E501
+from sdx_lc_client.rest import ApiException
 
 
 class TestTopologyApi(unittest.TestCase):
@@ -32,32 +32,32 @@ class TestTopologyApi(unittest.TestCase):
         """Test case for add_topology
         Send a new topology to SDX-LC  # noqa: E501
         """
-        p1 = swagger_client.Port(
+        p1 = sdx_lc_client.Port(
             id="n1:p1", name="p1", short_name="eth1", node="n1", status="UP"
         )
-        p2 = swagger_client.Port(
+        p2 = sdx_lc_client.Port(
             id="n2:p1", name="p2", short_name="eth2", node="n2", status="UP"
         )
         ps = []
         ps.append(p1)
         ps.append(p2)
-        lt = swagger_client.Location(address="miami")
-        node = swagger_client.Node(id="node1", name="node1", location=lt, ports=ps)
+        lt = sdx_lc_client.Location(address="miami")
+        node = sdx_lc_client.Node(id="node1", name="node1", location=lt, ports=ps)
         ns = []
         ns.append(node)
 
-        link = swagger_client.Link(id="link1", name="link1", ports=ps)
+        link = sdx_lc_client.Link(id="link1", name="link1", ports=ps)
         ls = []
         ls.append(link)
 
         timestmp = "2021-06-24T04:56:07+00:00"
-        topology_body = swagger_client.Topology(
+        topology_body = sdx_lc_client.Topology(
             id="topology1",
             name="topology1",
             nodes=ns,
             links=ls,
             version=1,
-            time_stamp=timestmp,
+            timestamp=timestmp,
         )
 
         try:
@@ -69,9 +69,6 @@ class TestTopologyApi(unittest.TestCase):
         except ApiException as e:
             print(e)
             # logger.warning("Exception when calling ConnectionApi->place_experiment: %s\n" % e)
-            return False
-
-        return True
 
     def test_delete_topology(self):
         """Test case for delete_topology

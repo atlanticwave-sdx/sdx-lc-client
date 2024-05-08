@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.api.node_api import NodeApi  # noqa: E501
-from swagger_client.rest import ApiException
+import sdx_lc_client
+from sdx_lc_client.api.node_api import NodeApi  # noqa: E501
+from sdx_lc_client.rest import ApiException
 
 
 class TestNodeApi(unittest.TestCase):
@@ -32,19 +32,19 @@ class TestNodeApi(unittest.TestCase):
         """Test case for add_node
         add a new node to the topology  # noqa: E501
         """
-        p1 = swagger_client.Port(
+        p1 = sdx_lc_client.Port(
             id="n1:p1", name="p1", short_name="eth1", node="n1", status="UP"
         )
-        p2 = swagger_client.Port(
+        p2 = sdx_lc_client.Port(
             id="n2:p1", name="p2", short_name="eth2", node="n2", status="UP"
         )
         ps = []
         ps.append(p1)
         # ps.append(p2)
-        lt = swagger_client.Location(
+        lt = sdx_lc_client.Location(
             address="miami", latitude=-28.51107891831147, longitude=-79.57947854792273
         )
-        node_body = swagger_client.Node(id="test1", name="test1", location=lt, ports=ps)
+        node_body = sdx_lc_client.Node(id="test1", name="test1", location=lt, ports=ps)
         try:
             # create a connection
             # logger.warning(connection_body)
@@ -54,9 +54,6 @@ class TestNodeApi(unittest.TestCase):
         except ApiException as e:
             print(e)
             # logger.warning("Exception when calling ConnectionApi->place_experiment: %s\n" % e)
-            return False
-
-        return True
 
     def test_delete_node(self):
         """Test case for delete_node
