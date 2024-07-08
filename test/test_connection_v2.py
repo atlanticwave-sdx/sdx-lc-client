@@ -15,12 +15,12 @@ from __future__ import absolute_import
 import unittest
 
 import sdx_lc_client
-from sdx_lc_client.models.api_response import ApiResponse  # noqa: E501
+from sdx_lc_client.models.connection_v2 import ConnectionV2  # noqa: E501
 from sdx_lc_client.rest import ApiException
 
 
-class TestApiResponse(unittest.TestCase):
-    """ApiResponse unit test stubs"""
+class TestConnectionV2(unittest.TestCase):
+    """ConnectionV2 unit test stubs"""
 
     def setUp(self):
         pass
@@ -28,10 +28,10 @@ class TestApiResponse(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testApiResponse(self):
-        """Test ApiResponse"""
+    def testConnectionV2(self):
+        """Test ConnectionV2"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = sdx_lc_client.models.api_response.ApiResponse()  # noqa: E501
+        # model = sdx_lc_client.models.connection_v2.ConnectionV2()  # noqa: E501
         pass
 
 

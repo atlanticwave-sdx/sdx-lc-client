@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **label_range** | **list[str]** |  | [optional] 
 **status** | **str** |  | 
 **state** | **str** |  | [optional] 
+**nni** | **str** |  | [optional] 
 **services** | [**Service**](Service.md) |  | [optional] 
 **private_attributes** | **list[str]** |  | [optional] 
 
