@@ -74,7 +74,7 @@ except ApiException as e:
 
 # create an instance of the API class
 api_instance = sdx_lc_client.ConnectionApi(sdx_lc_client.ApiClient(configuration))
-body = sdx_lc_client.Connection() # Connection | order placed for creating a connection
+body = sdx_lc_client.ConectionBody() # ConectionBody | order placed for creating a connection
 
 try:
     # Place an connection request from the SDX-Controller
@@ -121,7 +121,13 @@ Class | Method | HTTP request | Description
 ## Documentation For Models
 
  - [ApiResponse](docs/ApiResponse.md)
+ - [ConectionBody](docs/ConectionBody.md)
  - [Connection](docs/Connection.md)
+ - [ConnectionQosMetrics](docs/ConnectionQosMetrics.md)
+ - [ConnectionQosUnit](docs/ConnectionQosUnit.md)
+ - [ConnectionScheduling](docs/ConnectionScheduling.md)
+ - [ConnectionV2](docs/ConnectionV2.md)
+ - [ConnectionV2Endpoints](docs/ConnectionV2Endpoints.md)
  - [Link](docs/Link.md)
  - [LinkMeasurementPeriod](docs/LinkMeasurementPeriod.md)
  - [Location](docs/Location.md)

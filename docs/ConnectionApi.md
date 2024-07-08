@@ -118,7 +118,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = sdx_lc_client.ConnectionApi()
-body = sdx_lc_client.Connection() # Connection | order placed for creating a connection
+body = sdx_lc_client.ConectionBody() # ConectionBody | order placed for creating a connection
 
 try:
     # Place an connection request from the SDX-Controller
@@ -132,7 +132,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**Connection**](Connection.md)| order placed for creating a connection | 
+ **body** | [**ConectionBody**](ConectionBody.md)| order placed for creating a connection | 
 
 ### Return type
 

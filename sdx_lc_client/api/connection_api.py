@@ -242,7 +242,7 @@ class ConnectionApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param Connection body: order placed for creating a connection (required)
+        :param ConectionBody body: order placed for creating a connection (required)
         :return: Connection
                  If the method is called asynchronously,
                  returns the request thread.
@@ -263,7 +263,7 @@ class ConnectionApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param Connection body: order placed for creating a connection (required)
+        :param ConectionBody body: order placed for creating a connection (required)
         :return: Connection
                  If the method is called asynchronously,
                  returns the request thread.

@@ -20,14 +20,18 @@ from sdx_lc_client.api.link_api import LinkApi
 from sdx_lc_client.api.node_api import NodeApi
 from sdx_lc_client.api.topology_api import TopologyApi
 from sdx_lc_client.api.user_api import UserApi
-
 # import ApiClient
 from sdx_lc_client.api_client import ApiClient
 from sdx_lc_client.configuration import Configuration
-
 # import models into sdk package
 from sdx_lc_client.models.api_response import ApiResponse
+from sdx_lc_client.models.conection_body import ConectionBody
 from sdx_lc_client.models.connection import Connection
+from sdx_lc_client.models.connection_qos_metrics import ConnectionQosMetrics
+from sdx_lc_client.models.connection_qos_unit import ConnectionQosUnit
+from sdx_lc_client.models.connection_scheduling import ConnectionScheduling
+from sdx_lc_client.models.connection_v2 import ConnectionV2
+from sdx_lc_client.models.connection_v2_endpoints import ConnectionV2Endpoints
 from sdx_lc_client.models.link import Link
 from sdx_lc_client.models.link_measurement_period import LinkMeasurementPeriod
 from sdx_lc_client.models.location import Location

@@ -15,12 +15,13 @@ from __future__ import absolute_import
 import unittest
 
 import sdx_lc_client
-from sdx_lc_client.models.port import Port  # noqa: E501
+from sdx_lc_client.models.connection_scheduling import \
+    ConnectionScheduling  # noqa: E501
 from sdx_lc_client.rest import ApiException
 
 
-class TestPort(unittest.TestCase):
-    """Port unit test stubs"""
+class TestConnectionScheduling(unittest.TestCase):
+    """ConnectionScheduling unit test stubs"""
 
     def setUp(self):
         pass
@@ -28,10 +29,10 @@ class TestPort(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testPort(self):
-        """Test Port"""
+    def testConnectionScheduling(self):
+        """Test ConnectionScheduling"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = sdx_lc_client.models.port.Port()  # noqa: E501
+        # model = sdx_lc_client.models.connection_scheduling.ConnectionScheduling()  # noqa: E501
         pass
 
 

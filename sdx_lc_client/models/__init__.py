@@ -15,7 +15,13 @@ from __future__ import absolute_import
 
 # import models into model package
 from sdx_lc_client.models.api_response import ApiResponse
+from sdx_lc_client.models.conection_body import ConectionBody
 from sdx_lc_client.models.connection import Connection
+from sdx_lc_client.models.connection_qos_metrics import ConnectionQosMetrics
+from sdx_lc_client.models.connection_qos_unit import ConnectionQosUnit
+from sdx_lc_client.models.connection_scheduling import ConnectionScheduling
+from sdx_lc_client.models.connection_v2 import ConnectionV2
+from sdx_lc_client.models.connection_v2_endpoints import ConnectionV2Endpoints
 from sdx_lc_client.models.link import Link
 from sdx_lc_client.models.link_measurement_period import LinkMeasurementPeriod
 from sdx_lc_client.models.location import Location

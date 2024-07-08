@@ -19,7 +19,6 @@ import re
 import ssl
 
 import certifi
-
 # python 2 and python 3 compatibility library
 import six
 from six.moves.urllib.parse import urlencode
@@ -34,7 +33,6 @@ logger = logging.getLogger(__name__)
 
 
 class RESTResponse(io.IOBase):
-
     def __init__(self, resp):
         self.urllib3_response = resp
         self.status = resp.status
@@ -51,7 +49,6 @@ class RESTResponse(io.IOBase):
 
 
 class RESTClientObject(object):
-
     def __init__(self, configuration, pools_size=4, maxsize=None):
         # urllib3.PoolManager will pass all kw parameters to connectionpool
         # https://github.com/shazow/urllib3/blob/f9409436f83aeb79fbaf090181cd81b784f1b8ce/urllib3/poolmanager.py#L75  # noqa: E501
@@ -150,7 +147,7 @@ class RESTClientObject(object):
         timeout = None
         if _request_timeout:
             if isinstance(
-                _request_timeout, (int,) if six.PY3 else (int, int)
+                _request_timeout, (int,) if six.PY3 else (int, long)
             ):  # noqa: E501,F821
                 timeout = urllib3.Timeout(total=_request_timeout)
             elif isinstance(_request_timeout, tuple) and len(_request_timeout) == 2:
@@ -387,7 +384,6 @@ class RESTClientObject(object):
 
 
 class ApiException(Exception):
-
     def __init__(self, status=None, reason=None, http_resp=None):
         if http_resp:
             self.status = http_resp.status
