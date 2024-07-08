@@ -15,7 +15,8 @@ from __future__ import absolute_import
 import unittest
 
 import sdx_lc_client
-from sdx_lc_client.models.connection_qos_metrics import ConnectionQosMetrics  # noqa: E501
+from sdx_lc_client.models.connection_qos_metrics import \
+    ConnectionQosMetrics  # noqa: E501
 from sdx_lc_client.rest import ApiException
 
 
@@ -35,5 +36,5 @@ class TestConnectionQosMetrics(unittest.TestCase):
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()
